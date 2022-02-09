@@ -6,22 +6,22 @@ public class MAIN{
 
         System.out.println("hola");
 
-        Random rd=new Random();
-        Bubble b= new Bubble();
+        Random random=new Random();
+        Bubble bubble= new Bubble();
 
-        int largo=rd.nextInt(5)+1;
+        int largo=random.nextInt(10)+1;
 
         System.out.println("La lista ordenada es: ");
 
         for(int i=0;i<=largo;i++){
-            int x=rd.nextInt(100)+1;
-            b.add(x);
-            System.out.println(b.gets(i));
+            int x=random.nextInt(100)+1;
+            bubble.add(x);
+            System.out.println(bubble.gets(i));
 
 
         }
 
-        b.ordenar();
+        bubble.ordenar();
         
     }
 

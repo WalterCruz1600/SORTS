@@ -2,19 +2,12 @@ import java.util.Vector;
 
 public class Bubble implements InterBubble{
 
-    private Vector v1= new Vector<>();
+    private Vector vector1= new Vector<>();
 
 
     public void add(Object item){
 
-        v1.add(item);
-
-    };
-
-    public Object remove(){
-        Object x=v1.get(v1.size()-1);
-        v1.remove(v1.size()-1);
-        return x;
+        vector1.add(item);
 
     };
 
@@ -22,13 +15,13 @@ public class Bubble implements InterBubble{
     public Object gets(int i){
 
 
-        return v1.get(i);
+        return vector1.get(i);
 
     };
 
     public boolean empty(){
         boolean vacio=false;
-        if(v1.size()==0){
+        if(vector1.size()==0){
             vacio=true;
         }
         return vacio;
@@ -36,33 +29,32 @@ public class Bubble implements InterBubble{
 
     public int size(){
         
-        return v1.size();
+        return vector1.size();
     };
 
 
     public void ordenar(){
 
-        for(int i=0;i<v1.size();i++){
+        for(int i=0;i<vector1.size();i++){
 
 
-            System.out.println(i);
-            for(int j=0;j<v1.size();j++){
+            for(int j=0;j<vector1.size();j++){
 
-                int x=Integer.parseInt(v1.get(i).toString());
-                int y=Integer.parseInt(v1.get(j).toString());
+                int x=Integer.parseInt(vector1.get(i).toString());
+                int y=Integer.parseInt(vector1.get(j).toString());
                 
                 if(x<y){
 
-                    v1.set(i,y);
-                    v1.set(j,x);
+                    vector1.set(i,y);
+                    vector1.set(j,x);
                 }
                 
             }
 
         }
 
-        for(int i=0;i<v1.size();i++){
-            System.out.print(v1.get(i)+" ");
+        for(int i=0;i<vector1.size();i++){
+            System.out.print(vector1.get(i)+" ");
         }
 
 
