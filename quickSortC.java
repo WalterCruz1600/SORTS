@@ -9,20 +9,20 @@ import java.util.*;
  * @author José Auyón
  *
  */
-public class QuickSortC <E> implements ISort<E> {
+public class quickSortC <E> implements ISort<E> {
 	
 	// method to find the partition position
-	  static int partition(int array[], int low, int high) {
+	  static int partition(int array[], int bajo, int alto) {
 	    
 	    // choose the rightmost element as pivot
-	    int pivot = array[high];
+	    int pivot = array[alto];
 	    
 	    // pointer for greater element
-	    int i = (low - 1);
+	    int i = (bajo - 1);
 
 	    // traverse through all elements
 	    // compare each element with pivot
-	    for (int j = low; j < high; j++) {
+	    for (int j = bajo; j < alto; j++) {
 	      if (array[j] <= pivot) {
 
 	        // if element smaller than pivot is found
@@ -39,14 +39,14 @@ public class QuickSortC <E> implements ISort<E> {
 
 	    // swapt the pivot element with the greater element specified by i
 	    int temp = array[i + 1];
-	    array[i + 1] = array[high];
-	    array[high] = temp;
+	    array[i + 1] = array[alto];
+	    array[alto] = temp;
 
 	    // return the position from where partition is done
 	    return (i + 1);
 	  }
 
-	  static void quickSort(int array[], int low, int high) {
+	  static void quickSortArray(int array[], int low, int high) {
 	    if (low < high) {
 
 	      // find pivot element such that
@@ -55,26 +55,56 @@ public class QuickSortC <E> implements ISort<E> {
 	      int pi = partition(array, low, high);
 	      
 	      // recursive call on the left of pivot
-	      quickSort(array, low, pi - 1);
+	      quickSortArray(array, low, pi - 1);
 
 	      // recursive call on the right of pivot
-	      quickSort(array, pi + 1, high);
+	      quickSortArray(array, pi + 1, high);
 	    }
 	  }
+
+	@Override
+	public void add(E item) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public E gets(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void orden() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public E sort(E listToOrder) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	}
 
 	// Main class
-	class Main {
-	  public static void main(String args[]) {
+	class mainQuickSort {
+	  public static void mainQuickSort(String args[]) {
 
 	    int[] data = { 8, 7, 2, 1, 0, 9, 6 };
-	    System.out.println("Unsorted Array");
+	    System.out.println("Array no soportado");
 	    System.out.println(Arrays.toString(data));
 
 	    int size = data.length;
 
 	    // call quicksort() on array data
-	    QuickSortC.quickSort(data, 0, size - 1);
+	    quickSortC.quickSortArray(data, 0, size - 1);
 
 	    System.out.println("Sorted Array in Ascending Order: ");
 	    System.out.println(Arrays.toString(data));

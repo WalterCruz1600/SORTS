@@ -8,7 +8,7 @@ public class MAIN{
 
         System.out.println("hola");
 
-        Random random=new Random();
+        Random random=new Random();  // Se instancian random y bubble.
         Bubble bubble= new Bubble();
 
         int largo=random.nextInt(10)+1;

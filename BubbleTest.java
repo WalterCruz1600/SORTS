@@ -25,7 +25,7 @@ public class BubbleTest {
 		Bubble test = new Bubble();
 		int output = test.add(vector);
 		
-		assertEquals(5, output); // TODO
+		verify(5, output); // TODO
 	}
 
 	/**
