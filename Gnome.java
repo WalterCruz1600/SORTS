@@ -1,5 +1,8 @@
 import java.util.Arrays;
-class Gnome {
+import java.io.*;
+import java.util.*;
+
+public class Gnome implements ISort <E>{
  void gnomeSort(int[] nums)
   {
   int i=1;

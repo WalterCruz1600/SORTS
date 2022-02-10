@@ -1,6 +1,8 @@
 import java.util.Vector;
+import java.io.*;
+import java.util.*;
 
-public class Bubble implements InterBubble{
+public class Bubble implements ISort{
 
     private Vector vector1= new Vector<>();
 
