@@ -1,6 +1,10 @@
 import java.util.Random;
+import java.util.Vector;
 
 public class MAIN{
+
+    public static Vector vector1= new Vector<>();
+
 
     public static void main(String[]args){
 
@@ -8,6 +12,7 @@ public class MAIN{
 
         Random random=new Random();
         Bubble bubble= new Bubble();
+        Merge merge=new Merge();
 
         int largo=random.nextInt(10)+1;
 
@@ -15,13 +20,18 @@ public class MAIN{
 
         for(int i=0;i<=largo;i++){
             int x=random.nextInt(100)+1;
+            vector1.add(x);
             bubble.add(x);
-            System.out.println(bubble.gets(i));
+            merge.add(x);
+            System.out.println(vector1.get(i));
 
 
         }
-
+        System.out.println("Ordenamiento Bubble: ");
         bubble.ordenar();
+
+        System.out.println("\nOrdenamiento Merge: ");
+        merge.ordenar(vector1);
         
     }
 
