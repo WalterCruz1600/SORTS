@@ -10,19 +10,14 @@ import org.junit.Test;
  * @author José Auyón
  *
  */
-public class RadixSortTest {
-
-	/**
-	 * Test method for {@link RadixSort#sort(int[])}.
-	 */
+public class MergeSortTest {
 	@Test
 	public final void testSortRandom() {
 		int[] arr = {5,1,2,4};
 		int[] result = {1,2,4,5};
 		
-		RadixSort radix = new RadixSort();
-		radix.sort(arr);
-		assertEquals(radix.sort(result), result);
+		MergeSort merge = new MergeSort();
+		assertEquals(merge.sort(arr), result);
 		
 	}
 	
@@ -32,8 +27,8 @@ public class RadixSortTest {
 		int[] arr = {1,2,4,5};
 		int[] result = {1,2,4,5};
 		
-		RadixSort radix = new RadixSort();
-		assertEquals(radix.sort(arr), result);
+		MergeSort merge = new MergeSort();
+		assertEquals(merge.sort(arr), result);
 		
 	}
 	
@@ -42,9 +37,10 @@ public class RadixSortTest {
 		int[] arr = {5,4,2, 1};
 		int[] result = {1,2,4,5};
 		
-		RadixSort radix = new RadixSort();
-		assertEquals(radix.sort(arr), result);
+		MergeSort merge = new MergeSort();
+		assertEquals(merge.sort(arr), result);
 		
 	}
+
 
 }
